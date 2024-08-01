@@ -1,0 +1,46 @@
+.container {
+  max-width: 129rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 2rem;
+  }
+}
+
+.container-2 {
+  max-width: 140rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 2rem;
+  }
+}
+
+.section-authority {
+  background: #f5f5f5;
+  padding: 6rem 0;
+}
+
+.section-teachers {
+  background: var(--color-white);
+  padding: 6rem 0;
+}
+
+.section-gallery {
+  background: var(--color-white);
+  padding: 2rem 0 6rem 0;
+}
+
+.section-location {
+  background: var(--color-white);
+  padding-top: 2rem;
+}
+
+.section-footer {
+  background: #02080c;
+  padding-top: 10rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding-top: 5rem;
+  }
+}
