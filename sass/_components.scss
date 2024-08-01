@@ -155,23 +155,29 @@
 }
 
 .authority__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin-bottom: 3.2rem;
-
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media only screen and (max-width: $bp-smallest) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .authority__card {
   background: var(--color-white);
   border-radius: 1rem;
+  max-width: 40rem;
+  margin: 0 1.5rem;
+
+  @media only screen and (max-width: $bp-large) {
+    max-width: 39rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    max-width: 37rem;
+  }
+
+  :first-child {
+    margin-left: 0rem;
+  }
+
+  :last-child {
+    margin-right: 0rem;
+  }
 }
 
 .authority__img {
@@ -401,4 +407,48 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+}
+
+.authority-button-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.2rem;
+}
+
+.slick-arrow {
+  width: 0;
+  height: 0;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 4000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background: var(--color-text--dark);
+    color: var(--color-white);
+  }
+}
+
+.slick-prev::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url('/img/icons/authority-prev.svg');
+  transform: translateX(5px);
+}
+
+.slick-next::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url('/img/icons/authority-next.svg');
+  transform: translateX(-5px);
 }
