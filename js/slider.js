@@ -4,6 +4,10 @@ var $elementTeachersBtn = $('.teachers-button-wrapper');
 
 var $elementGalleryBtn = $('.gallery-button-wrapper');
 
+var $elementHerBtn = $('.hero__arrows');
+
+var $elementHeroMobileBtns = $('.hero-mobile__btns');
+
 $(document).ready(function () {
   $('.authority__cards').slick({
     slidesToShow: 3,
@@ -44,4 +48,26 @@ $(document).ready(function () {
     appendArrows: $elementGalleryBtn,
     centerMode: true,
   });
+});
+
+$('.hero__sliders').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  variableWidth: true,
+  arrows: true,
+  centerMode: true,
+  appendArrows: $elementHerBtn,
+});
+
+$('.hero-mobile__sliders').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  variableWidth: true,
+  arrows: true,
+  centerMode: true,
+  appendArrows: $elementHeroMobileBtns,
 });
