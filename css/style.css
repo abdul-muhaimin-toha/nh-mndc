@@ -487,8 +487,8 @@ body {
 .notices__hero {
   background: #f2f2f2;
   border-radius: 1rem;
-  padding: 2rem;
-  max-height: 48.1rem; }
+  padding: 2.2rem;
+  max-height: 48.4rem; }
   @media only screen and (max-width: 80em) {
     .notices__hero {
       grid-row-start: 2;
