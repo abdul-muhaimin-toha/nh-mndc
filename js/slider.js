@@ -71,3 +71,44 @@ $('.hero-mobile__sliders').slick({
   centerMode: true,
   appendArrows: $elementHeroMobileBtns,
 });
+
+$('.notices__container').slick({
+  slidesToShow: 5,
+  slidesToScroll: 2,
+  arrows: false,
+  dots: false,
+  vertical: true,
+  verticalSwiping: true,
+  autoplay: true,
+  autoplaySpeed: 1000,
+});
+
+let blocked = false;
+let blockTimeout = null;
+let prevDeltaY = 0;
+
+$('.notices__container').on('mousewheel DOMMouseScroll wheel', function (e) {
+  let deltaY = e.originalEvent.deltaY;
+  e.preventDefault();
+  e.stopPropagation();
+
+  clearTimeout(blockTimeout);
+  blockTimeout = setTimeout(function () {
+    blocked = false;
+  }, 50);
+
+  if (
+    (deltaY > 0 && deltaY > prevDeltaY) ||
+    (deltaY < 0 && deltaY < prevDeltaY) ||
+    !blocked
+  ) {
+    blocked = true;
+    prevDeltaY = deltaY;
+
+    if (deltaY > 0) {
+      $(this).slick('slickNext');
+    } else {
+      $(this).slick('slickPrev');
+    }
+  }
+});

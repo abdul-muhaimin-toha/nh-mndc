@@ -566,18 +566,19 @@
   overflow-y: scroll;
   gap: 4rem;
   scrollbar-width: thin;
-  max-height: 35rem;
+  height: 35rem;
 }
 
 .notice__box {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .notice__headline {
   color: #1a1a1a;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .notice__view {
