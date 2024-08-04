@@ -472,7 +472,7 @@
   grid-template-columns: 16.92fr 50.42fr 29.78fr;
   gap: 2rem;
 
-  @media only screen and (max-width: $bp-largest) {
+  @media only screen and (max-width: 1362px) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -530,12 +530,14 @@
   border-radius: 1rem;
   padding: 2.2rem;
   max-height: 48.4rem;
+  width: 42.5rem;
 
-  @media only screen and (max-width: $bp-largest) {
+  @media only screen and (max-width: 1362px) {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+    width: 100%;
   }
 
   @media only screen and (max-width: $bp-medium) {
@@ -543,6 +545,7 @@
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
+    width: 50vw;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -550,6 +553,15 @@
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: -1;
+    width: 94vw;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 90vw;
   }
 }
 
